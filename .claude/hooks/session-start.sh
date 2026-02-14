@@ -13,7 +13,7 @@ fi
 
 # Install just if not already available
 if ! command -v just &>/dev/null; then
-  curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
+  apt-get update -qq && apt-get install -y -qq just
 fi
 
 # Ensure PATH includes common install locations for the session
